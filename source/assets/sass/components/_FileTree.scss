@@ -1,0 +1,49 @@
+#{$prefix}filetree {
+	@extend .element;
+	flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-ctems: stretch;
+}
+
+#{$prefix}filetree #{$prefix}file {
+	@extend .element;
+	color: rgb(63,63,63);
+}
+
+#{$prefix}filetree #{$prefix}file:before {
+	@extend .element;
+	display: inline-block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	background: #484848;
+	-webkit-mask-size: contain;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-image: url('../icons/file.png');
+}
+
+#{$prefix}filetree #{$prefix}directory {
+	@extend .element;
+	color: rgb(63,63,63);
+}
+
+#{$prefix}filetree #{$prefix}directory:before {
+	@extend .element;
+	display: inline-block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	background: #484848;
+	-webkit-mask-size: contain;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-image: url('../icons/folder.png');
+}
+
+#{$prefix}filetree #{$prefix}directory #{$prefix}filetree {
+	@extend .element;
+	display: none;
+}

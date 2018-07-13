@@ -1,0 +1,13 @@
+#{$prefix}header {
+	@extend .element;
+	flex: 0 0 36px;
+	line-height: 36px;
+	font-size: 12px;
+	font-weight: 500;
+	border-top: 1px solid rgb(224,224,224);
+	border-bottom: 1px solid rgb(224,224,224);
+	padding: 0 10px;
+	background: rgb(252,251,252);
+	text-align: center;
+	color: rgb(103,103,103);
+}

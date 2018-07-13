@@ -1,0 +1,69 @@
+{
+  "name": "reactive",
+  "version": "1.0.0",
+  "description": "Reactive - The IDE for React-Native",
+  "main": "source/main.js",
+  "scripts": {
+    "test": "xo",
+    "start": "npm run webpack & npm run run",
+    "run": "electron --js-flags='--harmony' .",
+    "babel": "babel",
+    "webpack": "webpack"
+  },
+  "keywords": [
+    "react-native",
+    "reactive",
+    "react",
+    "native",
+    "ide"
+  ],
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  },
+  "author": "Adrian <Bizarrus>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.52",
+    "@babel/polyfill": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "@babel/preset-react": "^7.0.0-beta.52",
+    "@babel/register": "^7.0.0-beta.52",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.0-beta",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "css-loader": "^1.0.0",
+    "electron": "^2.0.4",
+    "electron-packager": "^12.1.0",
+    "electron-prebuilt": "^1.4.13",
+    "file-loader": "^1.1.11",
+    "json-loader": "^0.5.7",
+    "node-sass": "git://github.com/sass/node-sass.git#v5",
+    "react-styles-provider": "^0.4.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "xo": "^0.21.1"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-desktop": "^0.3.5",
+    "react-dom": "^16.4.1",
+    "react-filetree-electron": "^1.2.2",
+    "react-flex-split-pane": "github:instea/react-flex-split-pane",
+    "react-photonkit": "^0.4.1",
+    "react-redux": "^5.0.7",
+    "react-split-pane": "^2.0.2",
+    "react-split-panel": "^2.0.1",
+    "react-splitter-layout": "^3.0.0",
+    "react-workspace": "^0.4.1",
+    "redux": "^4.0.0",
+    "split.js": "^1.3.5"
+  }
+}

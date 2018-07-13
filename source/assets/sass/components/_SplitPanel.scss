@@ -1,0 +1,34 @@
+[data-type="Resizer"] {
+	background-color: #eee;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 1;
+	border: inherit !important;
+	background-clip: inherit !important;
+}	
+
+[data-type="Resizer"]:hover {
+	-webkit-transition: all 0.5s ease;
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+[data-type="Resizer"][data-attribute="horizontal"] {
+	height: 11px;
+	margin: -5px 0;
+	cursor: ns-resize;
+	width: 100%;
+	background-image: url('../icons/horizontal.png');
+}
+
+[data-type="Resizer"][data-attribute="vertical"] {
+	width: 11px;
+	margin: 0 -5px;
+	cursor: ew-resize;
+	background-image: url('../icons/vertical.png');
+}
+
+[data-type="Resizer"][data-attribute="disabled"] {
+	cursor: not-allowed;
+}

@@ -1,0 +1,88 @@
+#{$prefix}toolbar {
+	flex: 0 36px;
+	align-items: stretch;
+	line-height: 36px;
+	justify-content: space-between;
+	text-align: center;
+	color: rgb(103,103,103);
+	font-size: 12px;
+	font-weight: 500;
+	padding: 0 10px;
+	cursor: default;
+	background: linear-gradient(rgb(238,237,238), rgb(231,230,231));
+	border-bottom: 1px solid 1px solid rgb(224,224,226);
+}
+
+#{$prefix}toolbar #{$prefix}label {
+	color: #198BFB;
+}
+
+#{$prefix}toolbar #{$prefix}alignment {
+	display: flex;
+	flex-direction: row;
+}
+
+#{$prefix}toolbar #{$prefix}toolbarbutton {
+	@extend .element;
+	cursor: pointer;
+	padding: 0 0 5px 0;
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton #{$prefix}icon {
+	@extend .element;
+	background: linear-gradient(rgb(253,253,254), rgb(240,240,241));
+	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.15), inset 0px 1px 0px 0px rgba(255,255,255,0.25);
+	border: 1px solid rgb(151,151,151);
+	border-right: none;
+	border-radius: 0px;
+	padding: 2px 5px;
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton:active #{$prefix}icon {
+	background: linear-gradient(rgb(220,220,221), rgb(207,207,208));
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton:first-child #{$prefix}icon {
+	border-radius: 3px 0 0 3px;
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton:last-child #{$prefix}icon {
+	border-radius: 0 3px 3px 0;
+	border-right: 1px solid rgb(151,151,151);
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton #{$prefix}icon:after {
+	content: "";
+	@extend .element;
+	width: 32px;
+	height: 18px;
+	margin: 0 auto;
+	-webkit-mask-size: 32px 18px;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	background-color: rgb(103,103,103);
+}
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton[data-active="true"] #{$prefix}icon:after {
+	background-color: rgb(22,128,250);
+}
+
+$icons: project, community, console, debug, docs, file, folder, mirroring, new, properties, publish, refresh, save, settings, share;
+
+@each $name in $icons {
+	#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton #{$prefix}icon[name="#{$name}"]:after {
+		-webkit-mask-image: url('../icons/#{$name}.png');
+	}
+}
+
+
+#{$prefix}toolbar #{$prefix}alignment #{$prefix}toolbarbutton #{$prefix}label {
+	@extend .element;
+	font-size: 10px;
+    line-height: 11px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: rgb(73,73,73);
+    text-align: center;
+	padding: 2px 5px;
+}

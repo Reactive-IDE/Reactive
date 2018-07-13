@@ -1,0 +1,7 @@
+#{$prefix}window {
+	@extend .element;
+	display: flex;
+    flex: 1;
+	align-items: stretch;
+	flex-direction: column;
+}

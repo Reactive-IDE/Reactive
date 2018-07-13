@@ -1,0 +1,16 @@
+#{$prefix}scrollpane {
+	@extend .element;
+	flex: 1;
+    overflow-y: scroll;
+}
+
+#{$prefix}scrollpane:empty {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+#{$prefix}scrollpane:empty:after {
+	content: attr(data-empty);
+	@extend .element;	
+}
